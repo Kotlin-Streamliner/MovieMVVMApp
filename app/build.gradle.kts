@@ -81,8 +81,8 @@ dependencies {
 
     // Room
     val roomVersion = "2.6.1"
-    implementation("androidx.room:room-runtime:$roomVersion")
-    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
 
     // Extended Icons
     implementation("androidx.compose.material:material-icons-extended:1.6.7")
@@ -90,4 +90,5 @@ dependencies {
     // Dagger Hilt
     implementation("com.google.dagger:hilt-android:2.46")
     kapt("com.google.dagger:hilt-android-compiler:2.46")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")  // to inject viewmodel into compose view
 }

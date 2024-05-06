@@ -8,12 +8,12 @@ import retrofit2.http.Query
 interface MovieAPI {
 
     companion object {
-        const val BASE_URL = "https://api.themoviedb.org/3/"
+        const val BASE_URL = "https://api.themoviedb.org/3/movie/"
         const val IMAGE_BASE_URL = "https://api.themoviedb.org/3/"
         const val API_KEY = "9d0a29ce787ec703b2793a1ae1466d2b"
     }
 
-    @GET("movie/{category}")
+    @GET("{category}")
     suspend fun getMoviesList(
         @Path("category") category: String,
         @Query("page") page: Int,
